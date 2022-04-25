@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
-    public virtual void DisplayText()
+    public virtual void DisplayText() //Polymorphism
     {
         Debug.Log("Random shape clicked!");
     }
 
     private void OnMouseDown()
     {
+        //Abstraction
         DisplayText();
     }
 }

@@ -6,10 +6,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    public TextMeshProUGUI nameField;
+    public static GameManager Instance { get; private set; } //Encapsulation
+    [SerializeField] private TextMeshProUGUI nameField;
     private TextMeshProUGUI mainNameField;
-    public string playerName;
+    private string playerName;
     private bool nameEntered;
 
     private void Awake()
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //Abstraction
         UpdatePlayerName();
     }
 

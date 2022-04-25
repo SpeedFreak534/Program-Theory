@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : Shape
+public class Cube : Shape //Inheritance
 {
-    public string shapeName { get; private set; }
+    private string shapeName;
 
     private void Start()
     {
@@ -13,6 +13,7 @@ public class Cube : Shape
 
     public override void DisplayText()
     {
+        //Polymorphism
         Debug.Log(shapeName + " shape clicked!");
     }
 }
